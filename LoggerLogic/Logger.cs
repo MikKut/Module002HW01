@@ -19,22 +19,13 @@ namespace Logger
         }
 
         /// <summary>
-        /// Finalizes an instance of the <see cref="Logger"/> class.
-        /// Writes all in theLog.txt file class.
+        /// Gets all logs of the current session.
         /// </summary>
-        ~Logger()
+        /// <returns>String that represents all records of the session.</returns>
+        public static string GetAllLogs()
         {
-            using (StreamWriter w = File.AppendText("log.txt"))
-            {
-                w.Write(allRecordsOfTheSession!.ToString());
-            }
+            return allRecordsOfTheSession == null ? string.Empty : allRecordsOfTheSession.ToString();
         }
-
-        /// <summary>
-        /// Gets all records that was done during the session.
-        /// </summary>
-        /// <returns>All records of the session.</returns>
-        public static string GetAllRecordsOfTheSession() => allRecordsOfTheSession!.ToString();
 
         /// <summary>
         /// Get logger sample(singleton).
@@ -45,7 +36,7 @@ namespace Logger
             if (instance == null)
             {
                 instance = new Logger();
-                allRecordsOfTheSession = new StringBuilder();
+                allRecordsOfTheSession = new StringBuilder(string.Empty);
             }
 
             return instance;

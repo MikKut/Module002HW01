@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Logger
+﻿namespace Logger
 {
     /// <summary>
     /// A class for simulating how methods work.
@@ -36,6 +30,8 @@ namespace Logger
                     break;
                 }
             }
+
+            LogWriter.WriteAllInFile();
         }
 
         private static bool SimulateRandomMethod(Actions workFaker, MethodIndicator methodIndicator)

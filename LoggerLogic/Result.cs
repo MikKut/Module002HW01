@@ -15,7 +15,7 @@ namespace Logger
         /// Initializes a new instance of the <see cref="Result"/> class.
         /// </summary>
         /// <param name="errorMessage">Adds an error message <see cref="IResult.ErrorMessage">.</param>.
-        /// <param name="status">Describes posibility of program continuation.</param>.
+        /// <param name="status">Describes posibility of program continuation <see cref="IResult.Status">.</param>.
         public Result(string errorMessage, bool status)
         {
             this.ErrorMessage = errorMessage;
