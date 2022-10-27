@@ -19,7 +19,7 @@ namespace Logger
         public static void WriteAllInFile()
         {
             File.WriteAllText(PathOfTheFile, Logger.GetAllLogs());
-            Console.WriteLine($"The records was written in file {PathOfTheFile}");
+            Console.WriteLine($"The records were written in file {PathOfTheFile}");
         }
     }
 }
